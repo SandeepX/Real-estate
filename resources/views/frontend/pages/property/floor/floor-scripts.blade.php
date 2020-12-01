@@ -1,0 +1,93 @@
+{{--validation scripts--}}
+<script>
+
+    $(document).ready(function () {
+
+        $('#floor_form').validate({ // initialize the plugin
+            rules: {
+                floor_title:{
+                    required: true,
+                },
+                floor_description:"required",
+                floor_price:"required",
+                floor_area_size:"required",
+                floor_area_size_postfix:"required",
+                floor_bedrooms : "required",
+                floor_bathrooms : "required",
+
+            },
+            messages: {
+                floor_title: {
+                    required: "Floor title is required.",
+                },
+                floor_description: {
+                    required: "Floor Description is required.",
+                },
+                floor_price: {
+                    required: "Floor Price is required.",
+                },
+                floor_area_size: {
+                    required: "Floor Area Size is required.",
+                },
+                floor_area_size_postfix: {
+                    required: "Floor Area Size Postfix is required.",
+                },
+                floor_bedrooms: {
+                    required: "Floor Bedrooms is required.",
+                },
+                floor_bathrooms: {
+                    required: "Floor Bathrooms is required.",
+                },
+
+            },
+            onfocusout: false,
+            invalidHandler: function(form, validator) {
+                var errors = validator.numberOfInvalids();
+                if (errors) {
+                    validator.errorList[0].element.focus();
+                }
+            }
+        });
+
+
+    });
+</script>
+
+{{--ajax edit scripts--}}
+<script>
+
+    $('.edit-button').on('click', function (e) {
+
+        e.preventDefault();
+        let url = $(this).attr('href');
+
+        //ajax call to update page
+        updatePage(url);
+    });
+
+    function updatePage(url) {
+        $.ajax(
+            {
+                type: 'GET',
+                url: url,
+                datatype: "html",
+            }).done(function (data) {
+            $('#floor-tab').hide();
+            $("#dynamic-content").empty().html(data);
+            $('.summernote').summernote({
+                tabsize: 2,
+                height: 100
+            });
+        }).fail(function (jqXHR, ajaxOptions, thrownError) {
+            console.log("Error: " + errorThrown);
+            console.log("Status: " + status);
+            console.dir(xhr);
+        });
+
+    }
+
+    $('#view-floor-plan').on('click',function () {
+        $('#floor-tab').show();
+        $("#dynamic-content").empty();
+    });
+</script>

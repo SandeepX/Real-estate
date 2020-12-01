@@ -1,0 +1,340 @@
+#map {
+    height:400px;
+}
+.map_tab{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+/*
+#tab-pane-2 .map_tab{
+    height: ;
+}*/
+.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+
+.file-upload-content {
+    display: none;
+    text-align: center;
+}
+
+.file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.image-upload-wrap {
+    margin-bottom: 20px;
+    border: 2px dashed #d8cdcd;
+    position: relative;
+}
+
+.image-dropping,
+.image-upload-wrap:hover {
+    background-color: #e4e4e4;
+    border: 2px dashed #d8cdcd;
+}
+
+.image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+}
+
+.drag-text {
+    text-align: center;
+}
+
+.drag-text h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #15824B;
+    padding: 50px 0;
+}
+
+.file-upload-image {
+    max-height: 200px;
+    max-width: 200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.remove-image {
+    width: 200px;
+    margin: 0;
+    color: #fff;
+    background: #cd4535;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #b02818;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.remove-image:hover {
+    background: #c13b2a;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.remove-image:active {
+    border: 0;
+    transition: all .2s ease;
+}
+select.error{
+    color:#757575 !important;
+}
+
+/*daiko change*/
+#image_preview{
+    margin: 0 -5px;
+    margin-bottom: 20px;
+}
+#image_preview a{
+    width: 152px;
+    height: 150px;
+    margin:5px;
+    object-fit: cover;
+    display: inline-block;
+    position: relative;
+}
+#image_preview a img{
+    height: 100%;
+    width: 100%;
+}
+#image_preview a i{
+    position: absolute;
+    top: 5px;
+    right:5px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #FF4081;
+    transition: all .3s ease-in;
+}
+
+#image_preview1{
+    margin: 0 -5px;
+    margin-bottom: 20px;
+}
+#image_preview1 a{
+    width: 152px;
+    height: 150px;
+    margin:5px;
+    object-fit: cover;
+    display: inline-block;
+    position: relative;
+}
+#image_preview1 a img{
+    height: 100%;
+    width: 100%;
+}
+#image_preview1 a i{
+    position: absolute;
+    top: 5px;
+    right:5px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #FF4081;
+    transition: all .3s ease-in;
+}
+
+/*dbimages*/
+.db_images{
+    margin: 0 -5px;
+    margin-bottom: 20px;
+}
+.db_images a{
+    width: 152px;
+    height: 150px;
+    margin:5px;
+    object-fit: cover;
+    display: inline-block;
+    position: relative;
+}
+.db_images a img{
+    height: 100%;
+    width: 100%;
+}
+.db_images a i{
+    position: absolute;
+    top: 5px;
+    right:5px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #FF4081;
+    transition: all .3s ease-in;
+}
+
+/*for document */
+label.error{
+    color: red !important;
+}
+.db_docs a i{
+    cursor: pointer;
+    font-size: 18px;
+    color: #FF4081;
+    transition: all .3s ease-in;
+}
+
+#document_preview a i{
+    cursor: pointer;
+    font-size: 18px;
+    color: #FF4081;
+    transition: all .3s ease-in;
+}
+.unread_notification{
+    background-color: #f1f1f1;
+}
+.m-b-10{
+    margin-bottom: 10px;
+}
+
+.google-map-div{
+    position: absolute;
+    top: 10px;
+    z-index: 1;
+    left: 24%;
+    width: 75%;
+    margin-left: 10px;
+}
+.google-search-input {
+    width: 33%;
+    height: 40px;
+    border-radius: 3px!important;
+}
+.search-loca-a{
+    position: absolute;
+    top: 9px;
+    left: 29%;
+    color: #444;
+    font-size: 15px;
+}
+
+@media (max-width: 576px) {
+    .search-loca-a {
+        position: absolute;
+        top: 10px;
+        left: 81%;
+        color: #444;
+        font-size: 15px;
+    }
+    .google-search-input {
+        width: 90%;
+        height: 40px;
+        border-radius: 3px!important;
+    }
+    .google-map-div {
+        position: absolute;
+        top: 100px;
+        z-index: 1;
+        left: 1%;
+        width: 100%;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 768px){
+    .search-loca-a {
+        position: absolute;
+        top: 10px;
+        left: 90%;
+        color: #444;
+        font-size: 15px;
+    }
+    .google-search-input {
+        width: 90%;
+        height: 40px;
+        border-radius: 3px!important;
+    }
+    .google-map-div {
+        position: absolute;
+        top: 80px;
+        z-index: 1;
+        left: 2%;
+        width: 100%;
+        margin-left: 10px;
+    }
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1024px){
+    .search-loca-a {
+        position: absolute;
+        top: 10px;
+        left: 90%;
+        color: #444;
+        font-size: 15px;
+    }
+    .google-search-input {
+        width: 90%;
+        height: 40px;
+        border-radius: 3px!important;
+    }
+    .google-map-div {
+        position: absolute;
+        top: 80px;
+        z-index: 1;
+        left: 1%;
+        width: 100%;
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .search-loca-a {
+        position: absolute;
+        top: 10px;
+        left: 90%;
+        color: #444;
+        font-size: 15px;
+    }
+    .google-map-div {
+        position: absolute;
+        top: 10px;
+        z-index: 1;
+        left: 20%;
+        width: 100%;
+        margin-left: 10px;
+    }
+}
+.dataTables_wrapper.dt-bootstrap4.no-footer .dataTables_filter{
+    float: left;
+}
+.dt-button.buttons-excel.buttons-html5 {
+    float: right;
+    background: green;
+    color: #fff;
+    border: 0px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+.dash-user-action a.btn{
+    float: left;
+    margin-right: 10px;
+    color: #fff!important;
+}
+.dash-user-action form{
+    float: left;
+}
+.dash-user-action a.btn.btn-primary{
+    background-color: #003574!important;
+}
+.dash-user-action a.btn.btn-success{
+    background-color: green;
+}
+.dash-user-action .btn.btn-danger {
+    float: right;
+    border-radius: 0px!important;
+}
